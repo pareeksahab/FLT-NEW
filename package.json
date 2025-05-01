@@ -1,0 +1,36 @@
+{
+  "name": "fleet-logistics-tracker",
+  "version": "1.0.0",
+  "main": "main.js",
+  "homepage": "./",
+  "description": "Offline Fleet Logistics Tracker Desktop App",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "electron": "electron .",
+    "make": "npm run build && electron-builder"
+  },
+  "build": {
+    "appId": "com.fleet.tracker",
+    "productName": "Fleet Logistics Tracker",
+    "directories": {
+      "output": "out"
+    },
+    "files": [
+      "build/**/*",
+      "main.js"
+    ],
+    "win": {
+      "target": "nsis"
+    }
+  },
+  "dependencies": {
+    "electron": "^27.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1"
+  },
+  "devDependencies": {
+    "electron-builder": "^24.9.1"
+  }
+}
